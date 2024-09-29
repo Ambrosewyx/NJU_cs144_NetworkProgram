@@ -1,0 +1,18 @@
+# ninja log v6
+10	2467	1727586038344653585	util/CMakeFiles/util_debug.dir/ipv4_header.cc.o	5b46fa96e33e3f0b
+5	2469	1727586038336653867	util/CMakeFiles/util_debug.dir/address.cc.o	15189576d3cfb9f
+9	2901	1727586038340653727	util/CMakeFiles/util_debug.dir/file_descriptor.cc.o	57419a0c6f5b0efa
+8	3640	1727586038340653727	util/CMakeFiles/util_debug.dir/eventloop.cc.o	6fbf661c1ff0b0be
+2468	3913	1727586040800567060	util/CMakeFiles/util_debug.dir/random.cc.o	9450933c9f14eddf
+2901	4063	1727586041232551840	util/CMakeFiles/util_debug.dir/tun.cc.o	a1c6c5f03707e666
+2469	4244	1727586040800567060	util/CMakeFiles/util_debug.dir/socket.cc.o	234ac1c1442cab54
+4245	4465	1727586042576504493	util/libutil_debug.a	19381ef4d94785c1
+3641	4602	1727586041972525769	src/CMakeFiles/minnow_debug.dir/byte_stream.cc.o	bee18845762ea0af
+3913	4736	1727586042248516046	src/CMakeFiles/minnow_debug.dir/byte_stream_helpers.cc.o	4aaceff9b880c67c
+4736	4809	1727586043068487162	src/libminnow_debug.a	f0c652ad53ca5b13
+4465	5463	1727586042796496743	apps/CMakeFiles/tcp_native.dir/tcp_native.cc.o	2b0abca1a123c1e3
+4064	5794	1727586042396510833	apps/CMakeFiles/stream_copy.dir/bidirectional_stream_copy.cc.o	d19876f1c1901565
+5794	5863	1727586044124449964	apps/libstream_copy.a	3a1ea4e790ff1129
+5863	6012	1727586044196447427	apps/tcp_native	e3d452fb67ba309a
+4	1393	1727586102942380271	apps/CMakeFiles/webget.dir/webget.cc.o	dfe91cf549605521
+1394	1569	1727586104330331484	apps/webget	c8418c952424b240
