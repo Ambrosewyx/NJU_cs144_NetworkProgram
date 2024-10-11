@@ -76,31 +76,3 @@ uint64_t Reassembler::bytes_pending() const
   return sum;
 }
 
-
-// 相同first_index 不同length()
-// if(idx < Reassemble_buf_.size() && substring.first == Reassemble_buf_[idx].first){
-//   if(substring.second.length() > Reassemble_buf_[idx].second.length()) {
-//     Reassemble_buf_.erase( Reassemble_buf_.begin()+idx);
-//     Reassemble_buf_.insert(Reassemble_buf_.begin()+idx, substring);
-//   }
-// }else
-//   Reassemble_buf_.insert(Reassemble_buf_.begin()+idx, substring);
-
-
-// while(idx < Reassemble_buf_.size() && substring.first > Reassemble_buf_[idx].first)
-//   idx++;
-// // 插入之后需要消除overlap
-// uint64_t substrEnd = substring.first+substring.second.length();
-// while(idx < Reassemble_buf_.size()) {
-//   // 1.totally overlap
-//   if(substrEnd >= Reassemble_buf_[idx].first+Reassemble_buf_[idx].second.length())
-//     Reassemble_buf_.erase( Reassemble_buf_.begin()+idx );
-//   // 2. partially overlap
-//   else if(substrEnd >= Reassemble_buf_[idx].first && substrEnd < Reassemble_buf_[idx].first+Reassemble_buf_[idx].second.length()) {
-//     substring.second += Reassemble_buf_[idx].second.substr( substrEnd-Reassemble_buf_[idx].first );
-//     Reassemble_buf_.erase( Reassemble_buf_.begin()+idx );
-//   }
-//   // 3. no overlap
-//   else
-//     break;
-// }
