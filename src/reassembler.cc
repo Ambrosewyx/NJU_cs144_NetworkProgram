@@ -33,21 +33,21 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
   uint64_t dataFirst = first_index;
   bool insertFlag = true;
   while(idx < Reassemble_buf_.size()) {
-    if(dataFirst > bufStrEnd) // 6
+    if(dataFirst > bufStrEnd) // 2
       idx++;
-    else if(dataStrEnd<Reassemble_buf_[idx].first) // 5
+    else if(dataStrEnd<Reassemble_buf_[idx].first) // 1
       break;
-    else if(dataFirst < Reassemble_buf_[idx].first && dataStrEnd >= Reassemble_buf_[idx].first && dataStrEnd<bufStrEnd){ //1
+    else if(dataFirst < Reassemble_buf_[idx].first && dataStrEnd >= Reassemble_buf_[idx].first && dataStrEnd<bufStrEnd){ // 3
       data += Reassemble_buf_[idx].second.substr(dataStrEnd - Reassemble_buf_[idx].first);
       Reassemble_buf_.erase(Reassemble_buf_.begin()+idx);
-    }else if(dataFirst > Reassemble_buf_[idx].first&& dataFirst <= bufStrEnd && dataStrEnd > bufStrEnd ) { // 2
+    }else if(dataFirst > Reassemble_buf_[idx].first&& dataFirst <= bufStrEnd && dataStrEnd > bufStrEnd ) { // 4
       data  = Reassemble_buf_[idx].second.substr( 0, dataFirst-Reassemble_buf_[idx].first) + data;
       dataFirst = Reassemble_buf_[idx].first;
       Reassemble_buf_.erase(Reassemble_buf_.begin()+idx);
-    }else if(dataFirst <=Reassemble_buf_[idx].first && dataStrEnd>= bufStrEnd) { // 3
+    }else if(dataFirst <=Reassemble_buf_[idx].first && dataStrEnd>= bufStrEnd) { // 6
       Reassemble_buf_.erase(Reassemble_buf_.begin() + idx);
     }
-    else { // 4
+    else { // 5
       insertFlag = false;
       break;
     }
