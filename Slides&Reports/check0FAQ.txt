@@ -1,0 +1,32 @@
+1. authorization code是什么？
+答：是开启smtp服务后的授权码，不是qq邮箱的密码。
+
+2. 邮箱认证一直失败？
+答：可能是邮箱或者密码的base64编码有问题，不妨检查一下。
+
+3. 在telnet网页时，一直出现408 request timeout？
+答：在输入connection：close后，要按两次/多次空格。
+
+4. 如果连接不上cs144.keithw.org怎么办？
+答：可以请求别的网站（如www.baidu.com）的index.html。
+
+5. telnet发邮件内容为空？
+答：输入完subject后加一行空行，输入完内容后加个空行.表示结束。
+
+6. 必须用ubuntu 23.10吗？
+答：不是的，这只是cs144的推荐版本，ubuntu的版本不重要，只需要cmake和g++的版本正确就好，也不一定用ubuntu，wsl也可以。
+
+7. 遇到AddressSanitizer：DEADLYSIGNAL错误
+答：通过命令echo 0 | sudo tee /proc/sys/kernel/randomize_va_space，禁止liunx地址空间布局随机化ASLR。
+
+8. 关于实验报告
+答：不用管writeup文件夹下文件的内容，按照手册里的四条内容要求，重新写一个pdf格式的报告，放在根目录下即可。
+9. 关于apt报错找不到包
+答：可能是因为没有配置源，参考https://blog.csdn.net/qq_36698189/article/details/115607886
+10. 我已经下载了较低版本的g++，怎么办？
+答：参考https://www.cnblogs.com/jamesnulliu/p/5_Steps_to_Use_Cxx20_in_Ubuntu22.html，只需要下载一个较高版本的g++，切换即可。
+
+
+
+- — to be updated
+ 
